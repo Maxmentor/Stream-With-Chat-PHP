@@ -130,6 +130,34 @@ border-radius: .6px !important;
     display: none;
 }
 
+
+.file-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  background:black;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:30px;
+  transition:.2s;
+padding-left:-.6rem:
+}
+
+.file-btn:hover{
+  background:#00e676;
+  color:#000;
+}
+
+.file-btn:active{
+  transform:scale(0.95);
+}
+
+. file input popup {
+background-color:black;
+}
+
 </style>
 </head>
 <body>
@@ -204,12 +232,14 @@ border-radius: .6px !important;
             <h3>Room ID: <span id="roomIdText"><?= htmlspecialchars($_SESSION['room_id']) ?></span></h3>
  
     </div>
-    <div class="div" style="float:right;"><button style="width:50px; float:right;margin-top:-3.4rem;" class="btn" onclick="closeChat()">🗙</button></div>
+    <div class="div" style="float:right;"><button style="width:50px; float:right;margin-top:-3.4rem;" class="btn" onclick="closeChat()">×</button></div>
     <div class="chat-messages" id="messagesPopup"></div>
     <div class="bottom-bar">
-        <input type="text" id="msgInputPopup">
-        <input type="file" id="fileInputPopup" accept="image/*">
-        <button class="btn" id="sendBtnPopup">Send</button>
+        <input type="text" id="msgInputPopup" placeholder="Type message">
+   <label class="file-btn">
+<input type="file" id="fileInputPopup" class="fileInputPopup"  accept="image/*">
+     🗃️ </label>
+  <button class="btn" id="sendBtnPopup">Send</button>
     </div>
 </div>
 </div>
@@ -225,7 +255,7 @@ border-radius: .6px !important;
 
     <!-- HIDDEN INPUT (KEY PART) -->
     <input type="text" style="width:100%;height:40px;" id="copyInput" value="Hey Please Join My Room
- Go To https://locallhot/join-room.php
+ Go To https://locallhot/join-room.php &nbsp;
 
 Room ID: <?= htmlspecialchars($_SESSION['room_id']) ?>" />
 
@@ -275,7 +305,7 @@ function shareText(){
 
     if(navigator.share){
         navigator.share({
-            title: "Join My Room",
+            title: "Join My Room ",
             text: text
         }).catch(()=>{});
     }else{
