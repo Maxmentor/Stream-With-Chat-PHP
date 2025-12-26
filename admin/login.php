@@ -32,7 +32,7 @@ if(isset($_POST['login'])){
 <link rel="stylesheet" href="./assets/css/style.css">
 <style>
 body{font-family:Arial,sans-serif; background:#f5f5f5; padding:1rem;}
-.card{background:#fff; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; margin:1rem auto; width:96%; max-width:400px; padding:1rem; border-radius:8px;}
+.card{background:#fff; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; margin:1rem auto; width:89.5%; max-width:400px; padding:1rem; border-radius:8px;}
 h3{margin-bottom:1rem;}
 input, button{width:100%; padding:10px; margin-bottom:1rem; border:none; border-radius:6px;}
 button{background:#0072ff; color:#fff; font-weight:bold; cursor:pointer;}
@@ -46,7 +46,7 @@ button:hover{background:#0056c1;}
     <h3 style="color:black;">Login Admin</h3>
 <?php if(isset($err)) echo $err; ?>
 <form method="post">
-<input style="border:.3px solid;width:94.5%;"   name="username" placeholder="Username" required>
+<input style="border:.3px solid;width:94.5%;"   name="username" placeholder="Username or Email" required>
 <input style="border:.3px solid;width:94.5%;"   type="password" name="password" placeholder="Password" required>
 <button name="login">LOGIN</button>
 </form>
