@@ -118,7 +118,7 @@ if(!isset($_SESSION['room_id'])){
 
 
     button{
-border-radius: .6px !important;
+border-radius: .6px !important;margin-top:.7rem;
 }
 
 .vjs-modal-dialog-content{
