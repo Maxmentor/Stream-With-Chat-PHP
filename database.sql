@@ -38,17 +38,17 @@ CREATE TABLE admin_settings (
   brand_name VARCHAR(100) NOT NULL,
   footer_text VARCHAR(255) NOT NULL,
 
-  btn1_text VARCHAR(50) DEFAULT NULL,
-  btn1_url  VARCHAR(255) DEFAULT NULL,
+  btn1_text VARCHAR(50) DEFAULT 'NA',
+  btn1_url  VARCHAR(255) DEFAULT '#',
 
-  btn2_text VARCHAR(50) DEFAULT NULL,
-  btn2_url  VARCHAR(255) DEFAULT NULL,
+  btn2_text VARCHAR(50) DEFAULT 'NA',
+  btn2_url  VARCHAR(255) DEFAULT '#',
 
-  btn3_text VARCHAR(50) DEFAULT NULL,
-  btn3_url  VARCHAR(255) DEFAULT NULL,
+  btn3_text VARCHAR(50) DEFAULT 'NA',
+  btn3_url  VARCHAR(255) DEFAULT '#',
 
-  btn4_text VARCHAR(50) DEFAULT NULL,
-  btn4_url  VARCHAR(255) DEFAULT NULL
+  btn4_text VARCHAR(50) DEFAULT 'NA',
+  btn4_url  VARCHAR(255) DEFAULT '#'
 );
 
 
@@ -93,3 +93,4 @@ CREATE TABLE users (
   username VARCHAR(50) UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
